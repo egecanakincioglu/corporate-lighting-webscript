@@ -8,25 +8,35 @@ Afra Lighting’in kurumsal web platformu, şirketin aydınlatma çözümlerini 
 1. Kurumsal Ayarlar Yönetimi:
    
    • Şirket adı, logosu ve sosyal medya bağlantılarının güncellenmesi.
+
    • İletişim bilgileri ve şirket açıklamalarının kolayca düzenlenmesi.
+   
 3. Hizmet Yönetimi:
    
    • Sunulan hizmetlerin dinamik olarak eklenmesi ve düzenlenmesi.
+
    • Hizmetlerin görsel ve metinsel içerik yönetimi.
 5. Banner ve Reklam Alanları:
    
+
    • Dış müşterilere yönelik reklam banner’larının yönetimi.
+   
    • Dinamik görsel içerik düzenleme.
+   
 7. Ürün ve Katalog Yönetimi:
    
    • Aydınlatma ürünlerinin detaylarının sergilenmesi.
+   
    • PDF kataloglarının yüklenmesi ve yönetilmesi.
+   
 9. Vizyon ve Misyon Yönetimi:
     
    • Şirket vizyonu ve misyonunun içerik güncellemeleri.
+   
 11. Entegrasyonlar:
     
     • Google Ads entegrasyonu ile reklam verilerinin gösterimi.
+    
     • Kullanıcı etkileşimlerinin ve ziyaretçi istatistiklerinin takibi.
 
 ## 📂 Dosya Yapısı
