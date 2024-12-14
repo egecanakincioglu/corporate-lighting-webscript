@@ -89,7 +89,8 @@ Afra Lighting’in kurumsal web platformu, şirketin aydınlatma çözümlerini 
   ```
 
 5.	Proje Build ve Çalıştırma:
-	•	Geliştirme Modu:
+
+•Geliştirme Modu:
 
   ```
   npm run dev
