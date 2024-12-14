@@ -41,18 +41,31 @@ Afra Lighting’in kurumsal web platformu, şirketin aydınlatma çözümlerini 
 ## 📂 Dosya Yapısı
 
 ### Projenin dosya yapısı aşağıdaki gibi organize edilmiştir:
+
   • public/:
+  
   • Statik dosyalar (görseller, PDF’ler, favicon, vb.).
+  
   • src/components/:
+  
   • Ön yüz tasarımı için tekrar kullanılabilir bileşenler.
+  
   • src/pages/:
+  
   • Sayfa yapısı ve route tanımları (örneğin, index.tsx, contact.tsx).
+  
   • src/modules/:
+  
   • Yetkilendirme, veritabanı ve API çağrıları için yardımcı modüller.
+  
   • src/styles/:
+
   • SCSS tabanlı modüler stiller.
+  
   • prisma/:
+  
   • Veritabanı şeması ve yapılandırma dosyaları.
+  
 
 ## 🔧 Kullanılan Teknolojiler
 	1.	Frontend: React.js (Next.js framework’ü ile birlikte).
