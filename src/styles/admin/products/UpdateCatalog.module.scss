@@ -1,0 +1,190 @@
+@use "../../variables.scss" as *;
+
+.updateCatalogContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 80lvh;
+  width: 100%;
+
+  .outerBox {
+    background-color: $updateCatalogBoxColor;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px $updateCatalogShadowColor;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 15px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $updateCatalogPrimaryColor;
+      margin-bottom: 10px;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .infoText {
+      font-size: 1rem;
+      color: $updateCatalogTextColor;
+      margin-bottom: 20px;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .errorMessage {
+      color: $updateCatalogErrorColor;
+      font-size: 1rem;
+      margin-bottom: 10px;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .successMessage {
+      color: $updateCatalogSuccessColor;
+      font-size: 1rem;
+      margin-bottom: 10px;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .uploadArea {
+      background-color: lighten($updateCatalogBoxColor, 5%);
+      border: 2px dashed $updateCatalogUploadAreaBorder;
+      border-radius: 10px;
+      padding: 20px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      margin-bottom: 20px;
+
+      &:hover {
+        background-color: $updateCatalogBackgroundHover;
+      }
+
+      @media (max-width: 480px) {
+        padding: 15px;
+      }
+
+      .filePreview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .previewContainer {
+          position: relative;
+          display: inline-block;
+
+          .previewImage {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px $updateCatalogShadowColor;
+
+            @media (max-width: 480px) {
+              width: 70px;
+              height: 70px;
+            }
+          }
+
+          .removeIcon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: $updateCatalogBoxColor;
+            color: $updateCatalogErrorColor;
+            border-radius: 50%;
+            padding: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 2px 4px $updateCatalogShadowColor;
+
+            @media (max-width: 480px) {
+              font-size: 0.9rem;
+              padding: 3px;
+            }
+          }
+        }
+
+        p {
+          margin-top: 10px;
+          font-size: 0.9rem;
+          color: $updateCatalogPrimaryColor;
+
+          @media (max-width: 480px) {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      .uploadPlaceholder {
+        font-size: 1rem;
+        color: darken($updateCatalogTextColor, 10%);
+        cursor: pointer;
+
+        .hiddenInput {
+          display: none;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .updateButton {
+      background-color: $updateCatalogSecondaryColor;
+      color: $updateCatalogUpdateButton;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: lighten($updateCatalogSecondaryColor, 10%);
+      }
+
+      @media (max-width: 768px) {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 480px) {
+        padding: 7px 16px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

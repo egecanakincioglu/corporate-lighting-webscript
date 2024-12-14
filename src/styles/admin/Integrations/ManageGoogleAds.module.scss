@@ -1,0 +1,120 @@
+@use "../../variables.scss" as *;
+
+.googleAdsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80lvh;
+  padding: 1rem;
+
+  .innerBox {
+    width: 100%;
+    max-width: 600px;
+    background-color: $googleAdsBoxColor;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px $googleAdsShadowColor;
+    text-align: center;
+
+    h1 {
+      font-size: 1.8rem;
+      color: $googleAdsPrimaryColor;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+    }
+
+    .infoText {
+      font-size: 1rem;
+      color: $googleAdsTextColor;
+      margin-bottom: 2rem;
+
+      a {
+        color: $googleAdsSecondaryColor;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .integrationForm {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .inputGroup {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        label {
+          font-size: 1rem;
+          font-weight: bold;
+          color: $googleAdsTextColor;
+          margin-bottom: 0.5rem;
+        }
+
+        input {
+          width: 100%;
+          padding: 1rem;
+          font-size: 1rem;
+          border: 1px solid darken($googleAdsShadowColor, 10%);
+          border-radius: 8px;
+          background-color: lighten($googleAdsBoxColor, 5%);
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            border-color: $googleAdsSecondaryColor;
+          }
+        }
+      }
+
+      .buttonGroup {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+
+        button {
+          padding: 1rem;
+          font-size: 1.1rem;
+          border-radius: 8px;
+          cursor: pointer;
+          border: none;
+          transition: background-color 0.3s ease;
+
+          &.saveButton {
+            background-color: $googleAdsPrimaryColor;
+            color: $googleAdsSaveButton;
+
+            &:hover {
+              background-color: lighten($googleAdsPrimaryColor, 10%);
+            }
+          }
+
+          &.testButton {
+            background-color: $googleAdsSecondaryColor;
+            color: $googleAdsTestButton;
+
+            &:hover {
+              background-color: lighten($googleAdsSecondaryColor, 10%);
+            }
+          }
+        }
+      }
+
+      .feedbackText {
+        font-size: 1rem;
+        margin-top: 1rem;
+      }
+
+      .error {
+        color: $googleAdsErrorColor;
+      }
+
+      .success {
+        color: $googleAdsSuccessColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,256 @@
+@use "../../variables" as *;
+
+.servicesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 95lvh;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    height: 200lvh;
+  }
+
+  @media (max-width: 480px) {
+    height: 200lvh;
+  }
+
+  .outerBox {
+    background-color: $updateServicesBoxColor;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px $updateServicesShadowColor;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      padding: 15px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 10px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $updateServicesPrimaryColor;
+      margin-bottom: 10px;
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .infoText {
+      font-size: 1rem;
+      color: $updateServicesTextColor;
+      margin-bottom: 20px;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .errorMessage {
+      color: $updateServicesErrorColor;
+      font-size: 1rem;
+      margin-bottom: 20px;
+
+      @media (max-width: 480px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    .gridContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+      margin-bottom: 40px;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gridItem {
+      background-color: lighten($updateServicesBoxColor, 5%);
+      border: $updateServicesBorderDashed;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+      transition: background-color 0.3s ease;
+
+      &.drag {
+        background-color: lightgray;
+        border-color: blue;
+      }
+
+      &:hover {
+        background-color: $updateServicesBackgroundHover;
+      }
+
+      .imageContainer {
+        position: relative;
+
+        .serviceImage {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 10px;
+
+          @media (max-width: 480px) {
+            height: 120px;
+          }
+        }
+
+        .removeIcon {
+          position: absolute;
+          top: 8px;
+          right: 8px;
+          background-color: $updateServicesBoxColor;
+          color: $updateServicesErrorColor;
+          border-radius: 50%;
+          padding: 4px;
+          cursor: pointer;
+          font-size: 1rem;
+          box-shadow: 0 2px 4px $updateServicesShadowColor;
+
+          @media (max-width: 480px) {
+            font-size: 0.9rem;
+            padding: 3px;
+          }
+        }
+      }
+
+      .uploadPlaceholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        color: darken($updateServicesTextColor, 10%);
+        height: 150px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: $updateServicesBorderDashed;
+
+        .hiddenInput {
+          display: none;
+        }
+
+        @media (max-width: 480px) {
+          height: 120px;
+          font-size: 0.9rem;
+        }
+      }
+
+      .titleInput {
+        margin-top: 10px;
+        padding: 8px;
+        width: 100%;
+        font-size: 1rem;
+        border: 1px solid $updateServicesTitleInputBorder;
+        border-radius: 10px;
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+          padding: 7px;
+        }
+      }
+
+      .descriptionInput {
+        margin-top: 10px;
+        padding: 8px;
+        width: 100%;
+        font-size: 1rem;
+        height: 120px;
+        border: 1px solid $updateServicesDescriptionInputBorder;
+        border-radius: 10px;
+        resize: none;
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+          padding: 7px;
+          height: 100px;
+        }
+      }
+
+      .detailedDescriptionInput {
+        margin-top: 10px;
+        padding: 8px;
+        width: 100%;
+        font-size: 1rem;
+        height: 150px;
+        border: 1px solid $updateServicesDetailedInputBorder;
+        border-radius: 10px;
+        resize: none;
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+          padding: 7px;
+          height: 120px;
+        }
+      }
+    }
+
+    .buttonContainer {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      gap: 10px;
+
+      .clearButton {
+        background-color: $updateServicesErrorColor;
+        color: $updateServicesClearButton;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($updateServicesErrorColor, 10%);
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+          padding: 8px 16px;
+        }
+      }
+
+      .updateButton {
+        background-color: $updateServicesSecondaryColor;
+        color: $updateServicesUpdateButton;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: lighten($updateServicesSecondaryColor, 10%);
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+          padding: 8px 16px;
+        }
+      }
+    }
+  }
+}
